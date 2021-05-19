@@ -1,0 +1,16 @@
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.exe
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.deps.json
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.runtimeconfig.json
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.runtimeconfig.dev.json
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.dll
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\ref\DiceGame.dll
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\bin\Debug\net5.0\DiceGame.pdb
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.csprojAssemblyReference.cache
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.AssemblyInfoInputs.cache
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.AssemblyInfo.cs
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.csproj.CoreCompileInputs.cache
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.dll
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\ref\DiceGame.dll
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.pdb
+C:\Users\alexg\Desktop\Code\GitHub\CSharp\Microsoft_modules\DiceGame\DiceGame\obj\Debug\net5.0\DiceGame.genruntimeconfig.cache

@@ -6,9 +6,26 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var book = new Book("Alex's Grade Book");
-            
-            while(true)
+            //var book = new InMemoryBook("Alex's Book");
+            //book.GradeAdded += OnGradeAdded;
+
+            //EnterGrades(book);
+
+            //var stats = book.GetStatistics();
+
+            //Console.WriteLine($"For the book named {book.Name}");
+            //Console.WriteLine($"The lowest grade is {stats.Low}");
+            //Console.WriteLine($"The highest grade is {stats.High}");
+            //Console.WriteLine($"The average grade is {stats.Average:N2}");
+            //Console.WriteLine($"The letter grade is {stats.Letter}");
+
+            var book = new DiscBook("Alex's Disc Book");
+            EnterGrades(book);
+        }
+
+        private static void EnterGrades(IBook book)
+        {
+            while (true)
             {
                 Console.WriteLine("Enter a grade  or 'q' to quit");
                 string input = Console.ReadLine();
@@ -31,16 +48,13 @@ namespace GradeBook
                 {
                     Console.WriteLine(ex.Message);
                 }
-                
+
             }
+        }
 
-            book.GetStatistics();
-
-            var stats = book.GetStatistics();
-            Console.WriteLine($"The lowest grade is {stats.Low}");
-            Console.WriteLine($"The highest grade is {stats.High}");
-            Console.WriteLine($"The average grade is {stats.Average:N2}");
-            Console.WriteLine($"The letter grade is {stats.Letter}");
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("A grade was added");
         }
     }
 }

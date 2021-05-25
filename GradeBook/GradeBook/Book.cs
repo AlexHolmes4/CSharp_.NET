@@ -54,16 +54,36 @@ namespace GradeBook
         public override event GradeAddedDelegate GradeAdded;
         public override void AddGrade(double grade)
         {
-            using (var writer = File.AppendText($"{Name}.txt"))
+            using (StreamWriter writer = File.AppendText($"{Name}.txt"))
             {
-                writer.WriteLine(grade);
+                if (grade <= 100 && grade >= 0)
+                {
+                    writer.WriteLine(grade);
+                    if (GradeAdded != null)
+                    {
+                        GradeAdded(this, new EventArgs());
+                    }
+                }
+                else
+                {
+                    throw new ArgumentException($"Invalid {nameof(grade)}");
+                }               
             }
-
         }
 
         public override Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+            var result = new Statistics();
+
+            using (StreamReader reader = File.OpenText($"{Name}.txt"))
+            {
+                while(!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    result.Add(double.Parse(line));
+                }
+                return result;
+            }
         }
     }
 
@@ -119,36 +139,12 @@ namespace GradeBook
         public override Statistics GetStatistics()
         {
             var result = new Statistics();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
 
-            for(var index = 0; index < grades.Count; index++)
+            for (var index = 0; index < grades.Count; index++)
             {
-                result.Low = Math.Min(grades[index], result.Low);
-                result.High = Math.Max(grades[index], result.High);
-                result.Average += grades[index];
-            }
-            result.Average /= grades.Count;
-
-            switch(result.Average)
-            {
-                case var d when d >= 90.0:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >= 80.0:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >= 70.0:
-                    result.Letter = 'C';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
+                result.Add(grades[index]);
             }
             return result;
-
-        }
-        
+        }        
     }
 }

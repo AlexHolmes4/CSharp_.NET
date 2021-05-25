@@ -6,6 +6,7 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
+            //two main types of books for implementation InMemoryBook and DiskBook.
             Book book = new InMemoryBook("Alex's Book");
             book.GradeAdded += OnGradeAdded;
             

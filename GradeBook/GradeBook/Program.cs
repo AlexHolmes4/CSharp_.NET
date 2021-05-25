@@ -6,21 +6,18 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            //var book = new InMemoryBook("Alex's Book");
-            //book.GradeAdded += OnGradeAdded;
-
-            //EnterGrades(book);
-
-            //var stats = book.GetStatistics();
-
-            //Console.WriteLine($"For the book named {book.Name}");
-            //Console.WriteLine($"The lowest grade is {stats.Low}");
-            //Console.WriteLine($"The highest grade is {stats.High}");
-            //Console.WriteLine($"The average grade is {stats.Average:N2}");
-            //Console.WriteLine($"The letter grade is {stats.Letter}");
-
-            var book = new DiscBook("Alex's Disc Book");
+            Book book = new InMemoryBook("Alex's Book");
+            book.GradeAdded += OnGradeAdded;
+            
             EnterGrades(book);
+
+            var stats = book.GetStatistics();
+
+            Console.WriteLine($"For the book named {book.Name}");
+            Console.WriteLine($"The lowest grade is {stats.Low}");
+            Console.WriteLine($"The highest grade is {stats.High}");
+            Console.WriteLine($"The average grade is {stats.Average:N2}");
+            Console.WriteLine($"The letter grade is {stats.Letter}");
         }
 
         private static void EnterGrades(IBook book)

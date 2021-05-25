@@ -71,7 +71,7 @@ namespace GradeBook.Tests
         }
         void GetBookSetNewBookAndName(out Book book, string name)
         {
-            book = new Book(name); //out param keyword means a new instance must be initalized before method ends
+            book = new InMemoryBook(name); //out param keyword means a new instance must be initalized before method ends
         }
 
 
@@ -107,7 +107,7 @@ namespace GradeBook.Tests
         }
         void GetBookSetName(Book book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
             book.Name = name;
         }
 
@@ -176,7 +176,7 @@ namespace GradeBook.Tests
 
         Book GetBook(string name)
         {
-            return new Book(name);
+            return new InMemoryBook(name);
         }
     }
 }

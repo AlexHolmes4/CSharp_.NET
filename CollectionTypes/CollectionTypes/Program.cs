@@ -8,34 +8,21 @@ Purpose of Project is for unit testing only, see CollectionTypesTests proj.
 
 namespace CollectionTypes
 {
-    public class EmployeeComparer : IEqualityComparer<Employee>
-    {
-        public bool Equals(Employee x, Employee y)
-        {
-            return String.Equals(x.Name, y.Name);
-        }
-
-        public int GetHashCode([DisallowNull] Employee obj)
-        {
-            return obj.Name.GetHashCode();
-        }
-    }
+    
 
     class Program
     {
         static void Main(string[] args)
         {
-            var departments = new SortedDictionary<string, HashSet<Employee>>();
+            var departments = new DepartmentCollection();
 
-            departments.Add("Sales", new HashSet<Employee>(new EmployeeComparer()));
-            departments["Sales"].Add(new Employee { Name = "Joy" });
-            departments["Sales"].Add(new Employee { Name = "Dani" });
-            departments["Sales"].Add(new Employee { Name = "Dani" });
+            departments.Add("Sales", new Employee { Name = "Joy" })
+                       .Add("Sales", new Employee { Name = "Ben" })
+                       .Add("Sales", new Employee { Name = "Ben" });
 
-            departments.Add("Engineering", new HashSet<Employee>(new EmployeeComparer()));
-            departments["Engineering"].Add(new Employee { Name = "Scott" });
-            departments["Engineering"].Add(new Employee { Name = "Alex" });
-            departments["Engineering"].Add(new Employee { Name = "Dani" });
+            departments.Add("Engineering", new Employee { Name = "Scott" })
+                       .Add("Engineering", new Employee { Name = "Alex" })
+                       .Add("Engineering", new Employee { Name = "Dani" });
 
             foreach (var department in departments)
             {
@@ -44,6 +31,7 @@ namespace CollectionTypes
                 {
                     Console.WriteLine(employee.Name);
                 }
+                Console.WriteLine("\n");
             }
 
 

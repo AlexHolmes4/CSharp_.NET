@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace QueryIt
 {
-    public interface IRepository<T> : IReadOnlyRepository<T>, IWriteOnlyRepository<T>
+    public interface IWriteOnlyRepository<in T> : IDisposable
     {
-
+        void Add(T newEntity);
+        void Delete(T entity);
+        int Commit();
     }
 }

@@ -10,7 +10,7 @@ namespace DataStructures
     public static class BufferExtensions
     {
 
-        public static void Dump<T>(this IBuffer<T> buffer, PrinterDelegate print)
+        public static void Dump<T>(this IBuffer<T> buffer, Action<T> print)
         {
             foreach (var item in buffer)
             {
@@ -18,12 +18,11 @@ namespace DataStructures
             }
         }
 
-        public static IEnumerable<TOutput> AsEnumerableOf<T, TOutput>(this IBuffer<T> buffer)
+        public static IEnumerable<TOutput> Map<T, TOutput>(this IBuffer<T> buffer, Converter<T, TOutput> converter)
         {
-            var converter = TypeDescriptor.GetConverter(typeof(T));
             foreach (var item in buffer)
             {
-                TOutput result = (TOutput)converter.ConvertTo(item, typeof(TOutput));
+                TOutput result = converter(item);
                 yield return result;
             }
         }

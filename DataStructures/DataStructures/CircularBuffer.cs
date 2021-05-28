@@ -15,12 +15,23 @@ namespace DataStructures
             _capacity = capacity;
         }
 
+        public event EventHandler<ItemDiscardedEventArgs<T>> ItemDiscardedEventHandler;
+
         public override void Write(T value)
         {
             base.Write(value);
             if(_queue.Count > _capacity)
             {
-                _queue.Dequeue();
+                var discard = _queue.Dequeue();
+                OnItemDiscarded(discard, value);
+            }
+        }
+        public void OnItemDiscarded(T discard, T value)
+        {
+            if (ItemDiscardedEventHandler != null)
+            {
+                var args = new ItemDiscardedEventArgs<T>(discard, value);
+                ItemDiscardedEventHandler(this, args);
             }
         }
 

@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    public interface IBuffer<T> : IEnumerable<T>
+    class Class1
     {
-        bool IsEmpty { get; }
-        void Write(T value);
-        T Read();
-
-
     }
 }

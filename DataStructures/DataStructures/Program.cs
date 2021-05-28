@@ -13,13 +13,6 @@ namespace DataStructures
 
             ProcessInput(buffer);
 
-           // Converter<double, DateTime> converter = d => new DateTime(2010, 1, 1).AddDays(d);
-            var asDates = buffer.Map(d => new DateTime(2010, 1, 1).AddDays(d));
-            foreach (var date in asDates)
-            {
-                Console.WriteLine(date);
-            }
-
             buffer.Dump(d => Console.WriteLine(d));
 
             ProcessBuffer(buffer);
@@ -27,7 +20,7 @@ namespace DataStructures
 
         private static void ItemDiscarded(object sender, ItemDiscardedEventArgs<double> e)
         {
-            Console.WriteLine();
+            Console.WriteLine("Buffer full. Discarding {0} New item is {1}", e.ItemDiscarded, e.NewItem);
         }
 
         private static void ProcessInput(IBuffer<double> buffer)

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    class Class1
+    public class ItemDiscardedEventArgs<T> : EventArgs
     {
+        public T ItemDiscarded { get; set; }
+        public T NewItem { get; set; }
+
+        public ItemDiscardedEventArgs(T discard, T newitem)
+        {
+            ItemDiscarded = discard;
+            NewItem = newitem;
+        }
     }
 }

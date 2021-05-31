@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopulationsArray", "Populat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationsList", "PopulationsList\PopulationsList.csproj", "{FF6AB65E-CC85-4ECF-9F5D-4863C9F428EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationsDictionary", "PopulationsDictionary\PopulationsDictionary.csproj", "{3671D256-1540-4C2F-BAA0-A4FCE1DBFB97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FF6AB65E-CC85-4ECF-9F5D-4863C9F428EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6AB65E-CC85-4ECF-9F5D-4863C9F428EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6AB65E-CC85-4ECF-9F5D-4863C9F428EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3671D256-1540-4C2F-BAA0-A4FCE1DBFB97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3671D256-1540-4C2F-BAA0-A4FCE1DBFB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3671D256-1540-4C2F-BAA0-A4FCE1DBFB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3671D256-1540-4C2F-BAA0-A4FCE1DBFB97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

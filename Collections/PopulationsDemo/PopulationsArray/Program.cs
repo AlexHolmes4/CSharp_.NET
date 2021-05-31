@@ -17,6 +17,8 @@ namespace PopulationsArray
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
+            Console.WriteLine($"There were {countries.Length} countires in the data-set");
+
         }
     }
 }

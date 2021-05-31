@@ -13,11 +13,12 @@ namespace PopulationsList
             List<Country> countries = reader.ReadAllCountries();
 
             Console.WriteLine("Hightest Population by Countries Data");
-
-            foreach (Country country in countries)
+            for (int i = 0; i < countries.Count; i++)
             {
+                Country country = countries[i];
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
+            Console.WriteLine($"There were {countries.Count} countires in the data-set");
         }
     }
 }

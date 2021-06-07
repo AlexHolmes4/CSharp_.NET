@@ -15,7 +15,11 @@ namespace RestaurantsDetailsWebApp.Pages.Restaurants
         private readonly IConfiguration config;
         private readonly IRestaurantData restaurantData;
 
-        public string Message { get; set; }
+        [BindProperty(SupportsGet =true)]
+        public string SearchTerm { get; set; }
+
+        public string Message { get; set; } 
+
         public IEnumerable<Restaurant> Restaurants { get; set; }
 
         public ListModel(IConfiguration config, 
@@ -27,7 +31,7 @@ namespace RestaurantsDetailsWebApp.Pages.Restaurants
         public void OnGet()
         {
             Message = config["Message"];
-            Restaurants = restaurantData.GetAll();
+            Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
 }

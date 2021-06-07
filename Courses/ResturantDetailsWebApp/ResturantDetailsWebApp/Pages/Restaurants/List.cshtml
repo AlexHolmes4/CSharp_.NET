@@ -1,0 +1,22 @@
+﻿@page
+@model RestaurantsDetailsWebApp.Pages.Restaurants.ListModel
+@{
+}
+
+<h1>Restaurants</h1>
+
+<p>Use this page to select restaurants, to view their details.</p>
+
+<table class="table">
+    @foreach(var restaurant in Model.Restaurants)
+            {
+                <tr>
+                    <td>@restaurant.Name</td>
+                    <td>@restaurant.Location</td>
+                    <td>@restaurant.Cuisine</td>
+                </tr>
+            }
+</table>
+
+<div>@Model.Message</div>
+

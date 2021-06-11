@@ -24,19 +24,42 @@ namespace RestaurantsDetailsWebApp.Pages.Restaurants
             this.restaurantData = restaurantData;
             this.htmlhelper = htmlhelper;
         }
-        public IActionResult OnGet(int restaurantID)
+        public IActionResult OnGet(int? restaurantId)
         {
             Cuisines = htmlhelper.GetEnumSelectList<CuisineType>();
-            Restaurant = restaurantData.GetById(restaurantID);
-            return Restaurant == null ? RedirectToPage("./NotFound") : Page();
+            if (restaurantId.HasValue)
+            {
+                Restaurant = restaurantData.GetById(restaurantId.Value);
+            }
+            else
+            {
+                Restaurant = new Restaurant();
+            }
+
+            return Restaurant == null ? RedirectToPage("./NotFound") : Page();            
         }
 
         public IActionResult OnPost()
         {
-            Cuisines = htmlhelper.GetEnumSelectList<CuisineType>();
-            restaurantData.Update(Restaurant);
+            if(!ModelState.IsValid)
+            {
+                Cuisines = htmlhelper.GetEnumSelectList<CuisineType>();
+                return Page();
+            }
+
+            if (Restaurant.Id > 0)
+            {
+                TempData["Message"] = "Restaurant Updated";
+                restaurantData.Update(Restaurant);
+            }
+            else
+            {
+                TempData["Message"] = "New Restaurant Added";
+                restaurantData.Add(Restaurant);
+            }
+
             restaurantData.Commit();
-            return Page();
+            return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }
 }

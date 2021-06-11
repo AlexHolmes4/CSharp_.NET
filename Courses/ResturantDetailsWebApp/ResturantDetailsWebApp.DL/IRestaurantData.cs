@@ -13,6 +13,7 @@ namespace ResturantDetailsWebApp.DL
         Restaurant GetById(int id);
         Restaurant Update(Restaurant updatedRestaurant);
         int Commit();
+        Restaurant Add(Restaurant newRestaurant);
     }
 
     public class InMemoryResturantData : IRestaurantData
@@ -32,6 +33,13 @@ namespace ResturantDetailsWebApp.DL
         public Restaurant GetById(int id)
         {
             return restaurants.SingleOrDefault(r => r.Id == id);
+        }
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            restaurants.Add(newRestaurant);
+            newRestaurant.Id = restaurants.Max(r => r.Id) + 1;
+            return newRestaurant;
         }
 
         public Restaurant Update(Restaurant updatedRestaurant)
@@ -63,5 +71,6 @@ namespace ResturantDetailsWebApp.DL
         {
             
         }
+
     }
 }

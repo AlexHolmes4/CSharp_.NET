@@ -43,6 +43,11 @@
                    asp-route-restaurantId="@restaurant.Id">
                     <i class="fa fa-edit"></i>
                 </a>
+                <a class="btn btn-lg"
+                   asp-page="./Delete"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="fa fa-trash"></i>
+                </a>
             </td>
         </tr>
     }

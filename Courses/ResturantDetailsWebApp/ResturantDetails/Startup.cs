@@ -29,12 +29,8 @@ namespace RestaurantsDetails
             {
                 options.UseSqlServer(Configuration.GetConnectionString("RestaurantsDetailsDb"));
             });
-            //services.AddDbContextPool<RestaurantDetailsDbContext>(options =>
-            //{
-            //    options.UseSqlServer(Configuration.GetConnectionString("RestaurantsDetailsDb"));
-            //});
             services.AddRazorPages();
-            services.AddSingleton<IRestaurantData, InMemoryResturantData>(); 
+            services.AddScoped<IRestaurantData, SqlRestaurantData>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

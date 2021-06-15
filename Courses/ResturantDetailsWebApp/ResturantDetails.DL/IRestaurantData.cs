@@ -13,7 +13,6 @@ namespace ResturantDetails.DL
         Restaurant GetById(int id);
         Restaurant Update(Restaurant updatedRestaurant);
         Restaurant Delete(int id);
-        
         int Commit();
     }
 }

@@ -64,11 +64,5 @@ namespace ResturantDetails.DL
                    orderby r.Name
                    select r;
         }
-
-        public void UpdateRestaurant(int id)
-        {
-            
-        }
-
     }
 }

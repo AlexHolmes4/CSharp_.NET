@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ResturantDetailsWebApp.BL
+namespace ResturantDetails.BL
 {
 
     public class Restaurant

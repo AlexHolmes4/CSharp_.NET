@@ -1,21 +1,9 @@
-﻿using ResturantDetailsWebApp.BL;
-using System;
+﻿using ResturantDetails.BL;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ResturantDetailsWebApp.DL
+namespace ResturantDetails.DL
 {
-    public interface IRestaurantData
-    {
-        IEnumerable<Restaurant> GetRestaurantsByName(string name);
-        Restaurant GetById(int id);
-        Restaurant Update(Restaurant updatedRestaurant);
-        int Commit();
-        Restaurant Add(Restaurant newRestaurant);
-    }
-
     public class InMemoryResturantData : IRestaurantData
     {
         List<Restaurant> restaurants;
@@ -30,16 +18,16 @@ namespace ResturantDetailsWebApp.DL
             };
         }
 
-        public Restaurant GetById(int id)
-        {
-            return restaurants.SingleOrDefault(r => r.Id == id);
-        }
-
         public Restaurant Add(Restaurant newRestaurant)
         {
             restaurants.Add(newRestaurant);
             newRestaurant.Id = restaurants.Max(r => r.Id) + 1;
             return newRestaurant;
+        }
+
+        public Restaurant GetById(int id)
+        {
+            return restaurants.SingleOrDefault(r => r.Id == id);
         }
 
         public Restaurant Update(Restaurant updatedRestaurant)
@@ -50,6 +38,16 @@ namespace ResturantDetailsWebApp.DL
                 restaurant.Name = updatedRestaurant.Name;
                 restaurant.Location = updatedRestaurant.Location;
                 restaurant.Cuisine = updatedRestaurant.Cuisine;
+            }
+            return restaurant;
+        }
+
+        public Restaurant Delete(int id)
+        {
+            var restaurant = restaurants.FirstOrDefault(r => r.Id == id);
+            if (restaurant != null)
+            {
+                restaurants.Remove(restaurant);
             }
             return restaurant;
         }

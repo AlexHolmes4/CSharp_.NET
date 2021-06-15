@@ -1,4 +1,4 @@
-﻿namespace ResturantDetailsWebApp.BL
+﻿namespace ResturantDetails.BL
 {
     public enum CuisineType
     {

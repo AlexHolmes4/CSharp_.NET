@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
-using ResturantDetailsWebApp.BL;
-using ResturantDetailsWebApp.DL;
+using ResturantDetails.BL;
+using ResturantDetails.DL;
 
-namespace RestaurantsDetailsWebApp.Pages.Restaurants
+namespace RestaurantsDetails.Pages.Restaurants
 {
     public class ListModel : PageModel
     {

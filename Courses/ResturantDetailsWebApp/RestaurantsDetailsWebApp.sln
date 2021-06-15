@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantsDetailsWebApp", "ResturantDetailsWebApp\RestaurantsDetailsWebApp.csproj", "{24ED7542-BDC7-4B8D-9E08-85E812F087F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantsDetails", "ResturantDetails\RestaurantsDetails.csproj", "{24ED7542-BDC7-4B8D-9E08-85E812F087F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResturantDetailsWebApp.BL", "ResturantDetailsWebApp.Core\ResturantDetailsWebApp.BL.csproj", "{04637E9C-EEDC-4B5E-96F5-BF9B4E678F9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResturantDetails.BL", "ResturantDetails.BL\ResturantDetails.BL.csproj", "{04637E9C-EEDC-4B5E-96F5-BF9B4E678F9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResturantDetailsWebApp.DL", "ResturantDetailsWebApp.DL\ResturantDetailsWebApp.DL.csproj", "{07B57BFC-60E0-414C-80C1-04A17D26B1F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResturantDetails.DL", "ResturantDetails.DL\ResturantDetails.DL.csproj", "{07B57BFC-60E0-414C-80C1-04A17D26B1F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

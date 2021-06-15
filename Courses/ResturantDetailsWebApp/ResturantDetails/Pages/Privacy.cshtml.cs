@@ -6,20 +6,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestaurantsDetailsWebApp.Pages
+namespace RestaurantsDetails.Pages
 {
-    public class IndexModel : PageModel
+    public class PrivacyModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<PrivacyModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
-
         }
     }
 }

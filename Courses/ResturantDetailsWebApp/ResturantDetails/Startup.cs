@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ResturantDetailsWebApp.DL;
+using ResturantDetails.DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestaurantsDetailsWebApp
+namespace RestaurantsDetails
 {
     public class Startup
     {
@@ -24,8 +25,16 @@ namespace RestaurantsDetailsWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<RestaurantDetailsDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("RestaurantsDetailsDb"));
+            });
+            //services.AddDbContextPool<RestaurantDetailsDbContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration.GetConnectionString("RestaurantsDetailsDb"));
+            //});
             services.AddRazorPages();
-            services.AddSingleton<IRestaurantData, InMemoryResturantData>();
+            services.AddSingleton<IRestaurantData, InMemoryResturantData>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

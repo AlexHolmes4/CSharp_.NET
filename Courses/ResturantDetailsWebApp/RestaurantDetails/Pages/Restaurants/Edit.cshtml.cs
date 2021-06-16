@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using RestaurantDetails.BL;
 using RestaurantDetails.DL;
 
-namespace RestaurantsDetails.Pages.Restaurants
+namespace RestaurantDetails.Pages.Restaurants
 {
     public class EditModel : PageModel
     {

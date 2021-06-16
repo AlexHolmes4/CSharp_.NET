@@ -58,5 +58,10 @@ namespace RestaurantDetails.DL
                         select r;
             return query;
         }
+
+        public int GetCountOfRestaurants()
+        {
+            return db.Restaurants.Count();
+        }
     }
 }

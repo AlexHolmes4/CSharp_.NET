@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using RestaurantDetails.BL;
 using RestaurantDetails.DL;
 
-namespace RestaurantsDetails.Pages.Restaurants
+namespace RestaurantDetails.Pages.Restaurants
 {
     public class ListModel : PageModel
     {

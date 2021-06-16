@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using RestaurantDetails.BL;
 using RestaurantDetails.DL;
 
-namespace RestaurantsDetails.Pages.Restaurants
+namespace RestaurantDetails.Pages.Restaurants
 {
     public class DetailModel : PageModel
     {

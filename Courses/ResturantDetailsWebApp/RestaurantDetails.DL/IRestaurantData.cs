@@ -8,11 +8,12 @@ namespace RestaurantDetails.DL
 {
     public interface IRestaurantData
     {
-        IEnumerable<Restaurant> GetRestaurantsByName(string name);
         Restaurant Add(Restaurant newRestaurant);
         Restaurant GetById(int id);
         Restaurant Update(Restaurant updatedRestaurant);
         Restaurant Delete(int id);
         int Commit();
+        IEnumerable<Restaurant> GetRestaurantsByName(string name);
+        int GetCountOfRestaurants();
     }
 }

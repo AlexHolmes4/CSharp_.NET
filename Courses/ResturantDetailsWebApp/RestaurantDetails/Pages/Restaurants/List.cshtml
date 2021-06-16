@@ -1,12 +1,7 @@
 ﻿@page
-@model RestaurantsDetails.Pages.Restaurants.ListModel
+@model RestaurantDetails.Pages.Restaurants.ListModel
 @{
-    ViewData["Title"] = "List";
-}
-
-@section footer
-{
-    <div>@Model.Message</div>
+    ViewData["Title"] = "Restaurants";
 }
 
 <h1>Restaurants</h1>
@@ -29,10 +24,14 @@
 @foreach (var restaurant in Model.Restaurants)
 {
     <partial name="_Summary" model="restaurant" />
-}            
+}
 
 <a asp-page=".\Edit" class="btn btn-primary">Add New</a>
 
+@section footer
+{
+    <div>@Model.Message</div>
+}
 
 
 

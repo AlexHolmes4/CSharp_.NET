@@ -64,5 +64,10 @@ namespace RestaurantDetails.DL
                    orderby r.Name
                    select r;
         }
+
+        public int GetCountOfRestaurants()
+        {
+            return restaurants.Count();
+        }
     }
 }

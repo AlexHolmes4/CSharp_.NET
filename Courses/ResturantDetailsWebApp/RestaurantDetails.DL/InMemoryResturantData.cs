@@ -1,8 +1,8 @@
-﻿using ResturantDetails.BL;
+﻿using RestaurantDetails.BL;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ResturantDetails.DL
+namespace RestaurantDetails.DL
 {
     public class InMemoryResturantData : IRestaurantData
     {

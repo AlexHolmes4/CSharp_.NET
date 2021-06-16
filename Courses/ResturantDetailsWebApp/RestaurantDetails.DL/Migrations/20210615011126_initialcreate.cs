@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ResturantDetails.DL.Migrations
+namespace RestaurantDetails.DL.Migrations
 {
     public partial class initialcreate : Migration
     {

@@ -1,10 +1,10 @@
-﻿using ResturantDetails.BL;
+﻿using RestaurantDetails.BL;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResturantDetails.DL
+namespace RestaurantDetails.DL
 {
     public interface IRestaurantData
     {

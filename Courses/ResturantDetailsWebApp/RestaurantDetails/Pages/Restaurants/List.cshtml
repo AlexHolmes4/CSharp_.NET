@@ -1,0 +1,37 @@
+﻿@page
+@model RestaurantsDetails.Pages.Restaurants.ListModel
+@{
+}
+
+@section footer
+{
+    <div>@Model.Message</div>
+}
+
+<h1>Restaurants</h1>
+
+<p>Use this page to select restaurants, to view their details.</p>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-append">
+                <button class="btn btn-outline-secondary">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+@foreach (var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant" />
+}            
+
+<a asp-page=".\Edit" class="btn btn-primary">Add New</a>
+
+
+
+

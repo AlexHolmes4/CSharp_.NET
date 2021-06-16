@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ResturantDetails.DL;
+using RestaurantDetails.DL;
 
-namespace ResturantDetails.DL.Migrations
+namespace RestaurantDetails.DL.Migrations
 {
     [DbContext(typeof(RestaurantDetailsDbContext))]
-    partial class RestaurantDetailsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210615011126_initialcreate")]
+    partial class initialcreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

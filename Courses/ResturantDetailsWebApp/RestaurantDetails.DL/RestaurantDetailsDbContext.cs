@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ResturantDetails.BL;
+using RestaurantDetails.BL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResturantDetails.DL
+namespace RestaurantDetails.DL
 {
     public class RestaurantDetailsDbContext : DbContext
     {

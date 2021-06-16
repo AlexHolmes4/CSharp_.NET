@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ResturantDetails.BL\ResturantDetails.BL.csproj" />
+    <ProjectReference Include="..\RestaurantDetails.BL\RestaurantDetails.BL.csproj" />
   </ItemGroup>
 
 </Project>

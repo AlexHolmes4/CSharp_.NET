@@ -30,6 +30,7 @@ namespace RestaurantDetails
                 options.UseSqlServer(Configuration.GetConnectionString("RestaurantsDetailsDb"));
             });
             services.AddRazorPages();
+            services.AddControllers();
             services.AddScoped<IRestaurantData, SqlRestaurantData>(); 
         }
 
@@ -57,6 +58,7 @@ namespace RestaurantDetails
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

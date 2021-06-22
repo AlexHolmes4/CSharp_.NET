@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ResturantDetailsWebApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.3-web/css/all.css"/>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome-free/css/all.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -44,12 +44,12 @@
             <vc:restaurant-count></vc:restaurant-count>
             @RenderSection("footer", required: false)
             &copy; 2021 - ResturantDetailsWebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            <img style="float:right" src="/OdeToFood.png"/>
+            <img style="float:right" src="/OdeToFood.png" />
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/fontawesome-free-5.15.3-web/js/fontawesome.min.js"></script>
 

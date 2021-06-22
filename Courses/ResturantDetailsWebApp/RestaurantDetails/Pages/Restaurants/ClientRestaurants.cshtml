@@ -6,16 +6,31 @@
 
 <h2>Client Restaurants</h2>
 
+<table id="restaurants" class="table table-striped table-bordered" style="width:100%"></table>
+
 @section Scripts {
-<script>
 
-    $(function () {
-        $.ajax("/api/restaurants/",
-            { method: "get" })
-            .then(function (response) {
-                console.dir(response);
-            });
-    });
 
-</script>
+    
+    <script src="~/lib/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/lib/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+    <link href="~/lib/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+
+    <script>
+        $(function () {
+            $.ajax("/api/restaurants/",
+                { method: "get" })
+                .then(function (response) {
+                    $("#restaurants").dataTable({
+                        dom:
+                        data: response,
+                        columns: [
+                            {"data":"name"}
+                        ]
+
+                    });
+                });
+        });
+    </script>
 } 
